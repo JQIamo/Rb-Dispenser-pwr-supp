@@ -16991,6 +16991,7 @@ NS Package M08A</description>
 <pad name="3" x="5.1" y="0" drill="1.27" diameter="1.91"/>
 <text x="-2.54" y="3.81" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-2.54" y1="2.54" x2="7.62" y2="2.54" width="0.1524" layer="21"/>
 </package>
 <package name="TO255P1040X460X1968-3">
 <circle x="0" y="-2.195" radius="0.1" width="0.2" layer="21"/>
@@ -17012,6 +17013,8 @@ NS Package M08A</description>
 <pad name="3" x="5.1" y="0" drill="1.27" diameter="1.91"/>
 <text x="-3.45" y="3.555" size="1.778" layer="25">&gt;NAME</text>
 <text x="-3.45" y="-4.445" size="1.778" layer="27">&gt;VALUE</text>
+<wire x1="-2.54" y1="2.032" x2="7.747" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="7.747" y1="2.032" x2="7.747" y2="1.905" width="0.1524" layer="21"/>
 </package>
 <package name="22-23-2081">
 <description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 8 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232081_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
@@ -17514,6 +17517,23 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/37793330023930AD620_e.pd
 <technology name="">
 <attribute name="POPULARITY" value="17" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LM7915" prefix="U">
+<gates>
+<gate name="G$1" symbol="L7815CV" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO255P1040X460X1935-3">
+<connects>
+<connect gate="G$1" pin="GROUND" pad="1"/>
+<connect gate="G$1" pin="INPUT" pad="2"/>
+<connect gate="G$1" pin="OUTPUT" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -18340,7 +18360,7 @@ LETTER landscape</description>
 <part name="-24V/GND/+24V" library="schematic1" deviceset="PINHD-1X3" device=""/>
 <part name="U7" library="schematic1" deviceset="L7815CV" device=""/>
 <part name="U8" library="schematic1" deviceset="L7805CV" device=""/>
-<part name="U9" library="schematic1" deviceset="L7815CV" device=""/>
+<part name="U9" library="schematic1" deviceset="LM7915" device=""/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-024X044" package3d_urn="urn:adsk.eagle:package:23630/1"/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+15V" device=""/>
 <part name="P-4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="-15V" device=""/>
