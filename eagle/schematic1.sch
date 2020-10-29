@@ -16884,11 +16884,16 @@ NS Package M08A</description>
 <text x="-11.64" y="-3.75" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="STE250NS10">
-<wire x1="-13.97" y1="2.54" x2="-1.27" y2="2.54" width="0.127" layer="21"/>
-<pad name="D" x="7.493" y="7.493" drill="6" diameter="12" shape="square"/>
-<pad name="G" x="7.493" y="-7.493" drill="6" diameter="12" shape="square"/>
-<pad name="S1" x="-7.493" y="-7.493" drill="6" diameter="12" shape="square"/>
-<pad name="S4" x="-7.493" y="7.493" drill="6" diameter="12" shape="square"/>
+<pad name="D" x="7.5" y="6.35" drill="4.5" diameter="10" shape="square"/>
+<pad name="G" x="7.5" y="-6.35" drill="4.5" diameter="10" shape="square"/>
+<pad name="S1" x="-7.5" y="-6.35" drill="4.5" diameter="10" shape="square"/>
+<pad name="S4" x="-7.5" y="6.35" drill="4.5" diameter="10" shape="square"/>
+<circle x="-15.24" y="0" radius="1.27" width="0.127" layer="21"/>
+<wire x1="14.859" y1="-1.27" x2="14.859" y2="1.27" width="0.127" layer="21" curve="-180"/>
+<text x="0.635" y="-11.049" size="1.27" layer="21">G</text>
+<text x="0.508" y="1.651" size="1.27" layer="21">D</text>
+<text x="-14.097" y="-3.048" size="1.27" layer="21">S</text>
+<text x="-14.097" y="1.905" size="1.27" layer="21">S</text>
 </package>
 <package name="3.3V_HOOKIN">
 <wire x1="-12.8905" y1="10.16" x2="12.8905" y2="10.16" width="0.127" layer="21"/>
@@ -18373,7 +18378,6 @@ LETTER landscape</description>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
-<part name="LOGO1" library="JQI_Logo" deviceset="JQI-LOGO" device="SILK"/>
 </parts>
 <sheets>
 <sheet>
