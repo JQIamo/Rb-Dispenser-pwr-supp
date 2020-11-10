@@ -18344,7 +18344,7 @@ LETTER landscape</description>
 </classes>
 <parts>
 <part name="IC2" library="schematic1" deviceset="AD620" device="N"/>
-<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2"/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="7.2k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2"/>
 <part name="IC1" library="schematic1" deviceset="OP27" device="Z"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2"/>
@@ -18367,7 +18367,7 @@ LETTER landscape</description>
 <part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-024X044" package3d_urn="urn:adsk.eagle:package:23630/1"/>
 <part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-024X044" package3d_urn="urn:adsk.eagle:package:23630/1"/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="R7" library="schematic1" deviceset="FHR4V-0R1F1" device=""/>
+<part name="R7" library="schematic1" deviceset="FHR4V-0R1F1" device="" value="FHR4V-0R01F1"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="T1" library="schematic1" deviceset="STE250NS10" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-024X044" package3d_urn="urn:adsk.eagle:package:23630/1"/>
@@ -18404,6 +18404,16 @@ LETTER landscape</description>
 <sheets>
 <sheet>
 <plain>
+<text x="205.74" y="30.48" size="1.778" layer="97">At 15A we want 1.2V at the
+output of the diff ampl.
+1.2V/(15A*0.01Ohm) = G = 8 is the
+gain for the diff ampl.
+This requires (datasheet) a R6 = 7k05
+With 6.8k G= 8.26
+Imax = 1.2V/8.26/0.01 =14.5A
+With 7.5k G = 7.58
+Imax = 1.2/7.58/0.01 = 15.83A
+</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="195.58" y="83.82" smashed="yes" rot="MR0">
@@ -18411,8 +18421,8 @@ LETTER landscape</description>
 <attribute name="VALUE" x="186.687209375" y="76.197609375" size="1.778559375" layer="96" rot="MR0"/>
 </instance>
 <instance part="R6" gate="G$1" x="203.2" y="83.82" smashed="yes" rot="R90">
-<attribute name="NAME" x="201.7014" y="80.01" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="206.502" y="80.01" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="207.518" y="87.9094" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="209.042" y="84.836" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R2" gate="G$1" x="129.54" y="134.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="133.35" y="133.1214" size="1.778" layer="95" rot="R180"/>
@@ -18455,15 +18465,15 @@ LETTER landscape</description>
 <attribute name="VALUE" x="193.04" y="63.5" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R7" gate="G$1" x="218.44" y="86.36" smashed="yes" rot="R270">
-<attribute name="NAME" x="222.25" y="96.52" size="2.54" layer="95" rot="R270"/>
-<attribute name="VALUE" x="204.47" y="96.52" size="2.54" layer="96" rot="R270"/>
+<attribute name="NAME" x="220.98" y="85.09" size="2.54" layer="95"/>
+<attribute name="VALUE" x="220.98" y="80.01" size="2.54" layer="96"/>
 </instance>
 <instance part="P+1" gate="1" x="99.06" y="172.72" smashed="yes">
 <attribute name="VALUE" x="96.52" y="167.64" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="T1" gate="MOSFET" x="218.44" y="139.7" smashed="yes">
 <attribute name="NAME" x="222.258140625" y="139.7" size="1.78028125" layer="95"/>
-<attribute name="VALUE" x="222.262590625" y="137.15496875" size="1.78151875" layer="96"/>
+<attribute name="VALUE" x="220.230590625" y="135.37696875" size="1.78151875" layer="96"/>
 </instance>
 <instance part="C1" gate="G$1" x="129.54" y="157.48" smashed="yes">
 <attribute name="NAME" x="130.556" y="158.115" size="1.778" layer="95"/>
@@ -19077,6 +19087,10 @@ LETTER landscape</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
